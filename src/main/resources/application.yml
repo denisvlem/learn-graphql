@@ -1,0 +1,18 @@
+spring:
+  elasticsearch:
+graphql:
+  servlet:
+    # Sets if GraphQL servlet should be created and exposed. If not specified defaults to "true".
+    enabled: true
+    # Sets the path where GraphQL servlet will be exposed. If not specified defaults to "/graphql"
+    mapping: /graphql
+    cors-enabled: true
+
+application:
+  elasticsearch:
+    host: localhost
+    port: 9200
+
+logging:
+  level:
+    com.denisvlem.learngraphql.configuration.ElasticSearchConfiguration: debug
