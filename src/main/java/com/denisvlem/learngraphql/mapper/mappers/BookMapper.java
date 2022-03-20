@@ -7,5 +7,6 @@ import org.mapstruct.Mapper;
 
 @Mapper(config = CentralConfig.class)
 public interface BookMapper {
+
         Book toBook(BookDocument document);
 }

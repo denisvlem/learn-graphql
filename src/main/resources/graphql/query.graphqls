@@ -1,10 +1,14 @@
 # Available graphql queries for this API
 type Query {
-    book(id: Long): Book
+    book(id: String): Book
+}
+
+type Mutation {
+    addBook(title: String!, genre: Genre): Book
 }
 
 type Book {
-    id: Long!
+    id: String!
     title: String!
     genre: Genre
 }
@@ -15,5 +19,3 @@ enum Genre {
     NONFICTION
     OTHER
 }
-
-scalar Long

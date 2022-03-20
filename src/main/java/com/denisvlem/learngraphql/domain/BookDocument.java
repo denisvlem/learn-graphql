@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
 
 @Document(indexName = "book")
 @Builder
@@ -13,10 +12,9 @@ import org.springframework.data.elasticsearch.annotations.Field;
 public class BookDocument {
 
     @Id
-    private Long id;
+    private String id;
 
     private String title;
 
-    @Field
     private Genre genre;
 }

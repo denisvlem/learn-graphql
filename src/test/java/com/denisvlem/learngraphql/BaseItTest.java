@@ -1,6 +1,6 @@
 package com.denisvlem.learngraphql;
 
-import com.denisvlem.learngraphql.repository.BookRepository;
+import com.denisvlem.learngraphql.repository.elastic.BookRepository;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
