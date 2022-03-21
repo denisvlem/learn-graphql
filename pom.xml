@@ -21,6 +21,7 @@
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
         <graphql-spring-boot-starter-test.version>12.0.0</graphql-spring-boot-starter-test.version>
+        <rest-assured.version>4.5.1</rest-assured.version>
     </properties>
     <dependencies>
         <dependency>
@@ -41,6 +42,12 @@
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-tools</artifactId>
             <version>${graphql-java-tools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

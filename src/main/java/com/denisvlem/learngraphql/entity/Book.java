@@ -1,9 +1,9 @@
 package com.denisvlem.learngraphql.entity;
 
 import lombok.Builder;
-import lombok.Setter;
+import lombok.Data;
 
-@Setter
+@Data
 @Builder
 public class Book {
     private String id;

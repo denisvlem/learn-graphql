@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 class LearnGraphqlApplicationTests extends BaseItTest{
 
     @Autowired
-    private LearnGraphqlApplication context;
+    private LearnGraphqlApplication application;
 
     @Test
     void contextLoads() {
-        Assertions.assertNotNull(context);
+        Assertions.assertNotNull(application);
     }
 }

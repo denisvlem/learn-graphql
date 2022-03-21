@@ -1,6 +1,8 @@
 # Available graphql queries for this API
 type Query {
     book(id: String): Book
+    books: [Book]
+    booksByGenre(genre: Genre!): [Book]
 }
 
 type Mutation {
