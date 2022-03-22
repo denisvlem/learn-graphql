@@ -15,6 +15,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class BaseItTest {
 
+    public static String GRAPHQL_URL = "/graphql";
+
     @LocalServerPort
     protected int port;
 

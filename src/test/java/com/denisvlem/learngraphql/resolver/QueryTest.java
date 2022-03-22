@@ -16,7 +16,7 @@ class QueryTest extends BaseItTest {
 
     @Test
     void givenEmptyBody_whenGraphqlRequest_thenReturnBadParams() {
-        given().when().post("/graphql").then().statusCode(400);
+        given().when().post(GRAPHQL_URL).then().statusCode(400);
     }
 
     @Test
@@ -27,7 +27,7 @@ class QueryTest extends BaseItTest {
         query.setQuery(getBooksByGenreRequest(Genre.OTHER));
 
         //when
-        List<Book> response = given().body(query).when().post("/graphql")
+        List<Book> response = given().body(query).when().post(GRAPHQL_URL)
 
                 //then
                 .then().statusCode(200)
@@ -36,10 +36,10 @@ class QueryTest extends BaseItTest {
     }
 
     @Test
-    void givenEmptyIndex_whenGetBooksByGenreDetective_thenReturnEmptyList() {
+    void givenOneDetectiveBook_whenGetBooksByGenreDetective_thenReturnOneElementList() {
 
         //given
-        BookDocument doc = BookDocument.builder()
+        var doc = BookDocument.builder()
                 .id("testId")
                 .title("testTitle")
                 .genre(Genre.DETECTIVE).build();
@@ -51,7 +51,7 @@ class QueryTest extends BaseItTest {
         query.setQuery(getBooksByGenreRequest(Genre.DETECTIVE));
 
         //when
-        List<Book> response = given().body(query).when().post("/graphql")
+        var response = given().body(query).when().post(GRAPHQL_URL)
 
                 //then
                 .then().statusCode(200)
